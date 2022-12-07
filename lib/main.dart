@@ -1,5 +1,6 @@
 // import 'package:custompainter/src/pages/animaciones_page.dart';
 import 'package:custompainter/src/pages/circular_progress_page.dart';
+import 'package:custompainter/src/pages/pinterest_page.dart';
 import 'package:custompainter/src/pages/slideshow_page.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
@@ -27,7 +28,8 @@ class MyApp extends StatelessWidget {
       child: const MaterialApp(
           debugShowCheckedModeBanner: false,
           title: 'Diseños App',
-          home: SlideshowPage()),
+          // home: SlideshowPage()),
+          home: PinterestPage()),
     );
   }
 }

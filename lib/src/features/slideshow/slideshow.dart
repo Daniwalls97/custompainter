@@ -8,12 +8,16 @@ class Slideshow extends StatelessWidget {
   final List<Widget> slides;
   final Color colorPrimario;
   final Color colorSecundario;
+  final double bulletPrimario;
+  final double bulletSecundario;
 
   const Slideshow(
       {Key? key,
       required this.slides,
       this.colorPrimario = Colors.pinkAccent,
-      this.colorSecundario = Colors.grey})
+      this.colorSecundario = Colors.grey,
+      this.bulletPrimario = 12.0,
+      this.bulletSecundario = 12.0})
       : super(key: key);
 
   @override
@@ -25,6 +29,10 @@ class Slideshow extends StatelessWidget {
           builder: (context) {
             Provider.of<SlideshowUI>(context).colorPrimario = colorPrimario;
             Provider.of<SlideshowUI>(context).colorSecundario = colorSecundario;
+
+            Provider.of<SlideshowUI>(context).bulletPrimario = bulletPrimario;
+            Provider.of<SlideshowUI>(context).bulletSecundario =
+                bulletSecundario;
 
             return Column(children: [
               Expanded(
@@ -68,17 +76,24 @@ class _Dot extends StatelessWidget {
   Widget build(BuildContext context) {
     final provider = Provider.of<SlideshowUI>(context);
 
+    double tamanio = 0;
+    Color color;
+
+    if (provider.currentPage >= index - 0.5 &&
+        provider.currentPage < index + 0.5) {
+      tamanio = provider.bulletPrimario;
+      color = provider.colorPrimario;
+    } else {
+      tamanio = provider.bulletSecundario;
+      color = provider.colorSecundario;
+    }
+
     return AnimatedContainer(
       duration: const Duration(milliseconds: 200),
-      width: 12,
-      height: 12,
+      width: tamanio,
+      height: tamanio,
       margin: const EdgeInsets.symmetric(horizontal: 8),
-      decoration: BoxDecoration(
-          color: (provider.currentPage >= index - 0.5 &&
-                  provider.currentPage < index + 0.5)
-              ? provider.colorPrimario
-              : provider.colorSecundario,
-          shape: BoxShape.circle),
+      decoration: BoxDecoration(color: color, shape: BoxShape.circle),
     );
   }
 }
