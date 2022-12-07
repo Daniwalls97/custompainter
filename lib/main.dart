@@ -1,5 +1,6 @@
 // import 'package:custompainter/src/pages/animaciones_page.dart';
 import 'package:custompainter/src/pages/circular_progress_page.dart';
+import 'package:custompainter/src/pages/slideshow_page.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:disposable_provider/disposable_provider.dart';
@@ -26,7 +27,7 @@ class MyApp extends StatelessWidget {
       child: const MaterialApp(
           debugShowCheckedModeBanner: false,
           title: 'Diseños App',
-          home: CircularProgressPage()),
+          home: SlideshowPage()),
     );
   }
 }
