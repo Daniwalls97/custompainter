@@ -1,11 +1,14 @@
-// import 'package:custompainter/src/pages/animaciones_page.dart';
-// import 'package:custompainter/src/pages/circular_progress_page.dart';
+import 'package:custompainter/src/pages/animaciones_page.dart';
+import 'package:custompainter/src/pages/circular_progress_page.dart';
+import 'package:custompainter/src/pages/headers_page.dart';
 import 'package:custompainter/src/pages/pinterest_page.dart';
-// import 'package:custompainter/src/pages/slideshow_page.dart';
+import 'package:custompainter/src/pages/slideshow_page.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:disposable_provider/disposable_provider.dart';
 import 'package:vsync_provider/vsync_provider.dart';
+
+import 'src/pages/home_page.dart';
 
 void main() {
   runApp(const MyApp());
@@ -25,11 +28,20 @@ class MyApp extends StatelessWidget {
           ),
         )
       ],
-      child: const MaterialApp(
+      child: MaterialApp(
           debugShowCheckedModeBanner: false,
           title: 'Diseños App',
           // home: SlideshowPage()),
-          home: PinterestPage()),
+          initialRoute: '/',
+          routes: {
+            '/': (context) => const HomePage(),
+            'slideshowPage': (context) => const SlideshowPage(),
+            'animacionesPage': (context) => const AnimacionesPage(),
+            // 'circularProgressPage': (context) => const CircularProgressPage(),
+            'pinterestPage': (context) => const PinterestPage(),
+            'headersPage': (context) => const HeadersPage()
+          }),
+      // home: PinterestPage()),
     );
   }
 }
