@@ -1,7 +1,7 @@
 // import 'package:custompainter/src/pages/animaciones_page.dart';
-import 'package:custompainter/src/pages/circular_progress_page.dart';
+// import 'package:custompainter/src/pages/circular_progress_page.dart';
 import 'package:custompainter/src/pages/pinterest_page.dart';
-import 'package:custompainter/src/pages/slideshow_page.dart';
+// import 'package:custompainter/src/pages/slideshow_page.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:disposable_provider/disposable_provider.dart';
