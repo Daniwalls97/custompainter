@@ -1,3 +1,5 @@
+// ignore_for_file: unnecessary_import, depend_on_referenced_packages, prefer_typing_uninitialized_variables
+
 import 'dart:math';
 import 'dart:ui';
 
@@ -14,7 +16,7 @@ class CircularProgressPage extends StatelessWidget {
     return ChangeNotifierProvider(
       create: ((context) => CircularProgressPageUI()),
       child: Scaffold(
-        floatingActionButton: RefreshIndicatorButton(),
+        floatingActionButton: const RefreshIndicatorButton(),
         body: Center(
           child: Container(
             padding: const EdgeInsets.all(5),
@@ -51,13 +53,13 @@ class RefreshIndicatorButton extends StatelessWidget {
         .addListener(() => circularProvider.updatePorcentajeState(controller));
 
     return FloatingActionButton(
-        child: Icon(Icons.refresh),
         backgroundColor: Colors.pink,
         onPressed: () {
           circularProvider.updatePorcentaje();
 
           // controller.forward(from: 0.0);
-        });
+        },
+        child: const Icon(Icons.refresh));
   }
 }
 
@@ -69,18 +71,18 @@ class _MiRadialProgress extends CustomPainter {
   @override
   void paint(Canvas canvas, Size size) {
     // Circulo completado
-    final paint = new Paint()
+    final paint = Paint()
       ..strokeWidth = 4
       ..color = Colors.grey
       ..style = PaintingStyle.stroke;
 
-    final center = new Offset(size.width * 0.5, size.height / 2);
+    final center = Offset(size.width * 0.5, size.height / 2);
     final radio = min(size.width * 0.5, size.height * 0.5);
 
     canvas.drawCircle(center, radio, paint);
 
     // Arco
-    final paintArco = new Paint()
+    final paintArco = Paint()
       ..strokeWidth = 10
       ..color = Colors.pink
       ..style = PaintingStyle.stroke;

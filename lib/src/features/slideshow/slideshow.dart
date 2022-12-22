@@ -55,7 +55,7 @@ class _Dots extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
+    return SizedBox(
       width: double.infinity,
       height: 70,
       child: Row(
@@ -70,7 +70,7 @@ class _Dots extends StatelessWidget {
 class _Dot extends StatelessWidget {
   final int index;
 
-  _Dot(this.index);
+  const _Dot(this.index);
 
   @override
   Widget build(BuildContext context) {
@@ -108,7 +108,7 @@ class _Slides extends StatefulWidget {
 }
 
 class _SlidesState extends State<_Slides> {
-  final pageViewController = new PageController();
+  final pageViewController = PageController();
 
   @override
   void initState() {
@@ -128,11 +128,9 @@ class _SlidesState extends State<_Slides> {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      child: PageView(
-        controller: pageViewController,
-        children: widget.slides.map((slide) => _Slide(slide)).toList(),
-      ),
+    return PageView(
+      controller: pageViewController,
+      children: widget.slides.map((slide) => _Slide(slide)).toList(),
     );
   }
 }
@@ -140,7 +138,7 @@ class _SlidesState extends State<_Slides> {
 class _Slide extends StatelessWidget {
   final Widget slide;
 
-  _Slide(this.slide);
+  const _Slide(this.slide);
 
   @override
   Widget build(BuildContext context) {

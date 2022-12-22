@@ -1,3 +1,5 @@
+// ignore_for_file: unused_import, depend_on_referenced_packages
+
 import 'package:custompainter/src/pages/animaciones_page.dart';
 import 'package:custompainter/src/pages/circular_progress_page.dart';
 import 'package:custompainter/src/pages/headers_page.dart';

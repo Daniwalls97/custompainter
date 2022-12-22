@@ -1,3 +1,5 @@
+// ignore_for_file: depend_on_referenced_packages
+
 import 'package:custompainter/src/features/pinterestMenu/pinterest_menu.dart';
 import 'package:custompainter/src/pages/pinterest_page.ui.dart';
 import 'package:flutter/material.dart';

@@ -1,3 +1,5 @@
+// ignore_for_file: depend_on_referenced_packages
+
 import 'package:custompainter/src/features/pinterestMenu/pinterest_menu.ui.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
@@ -17,7 +19,7 @@ class PinterestMenu extends StatelessWidget {
   final Color noActiveOptColor;
   final List<PinterestButton> items;
 
-  PinterestMenu(
+  const PinterestMenu(
       {Key? key,
       this.showMenu = true,
       this.backgroundColor = Colors.white,
