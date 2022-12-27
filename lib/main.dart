@@ -2,6 +2,7 @@
 
 import 'package:custompainter/src/pages/animaciones_page.dart';
 import 'package:custompainter/src/pages/circular_progress_page.dart';
+import 'package:custompainter/src/pages/emergency_page.dart';
 import 'package:custompainter/src/pages/headers_page.dart';
 import 'package:custompainter/src/pages/pinterest_page.dart';
 import 'package:custompainter/src/pages/slideshow_page.dart';
@@ -41,7 +42,8 @@ class MyApp extends StatelessWidget {
             'animacionesPage': (context) => const AnimacionesPage(),
             // 'circularProgressPage': (context) => const CircularProgressPage(),
             'pinterestPage': (context) => const PinterestPage(),
-            'headersPage': (context) => const HeadersPage()
+            'headersPage': (context) => const HeadersPage(),
+            'emergencyPage': (context) => EmergencyPage()
           }),
       // home: PinterestPage()),
     );

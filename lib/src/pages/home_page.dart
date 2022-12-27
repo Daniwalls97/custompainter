@@ -33,6 +33,10 @@ class HomePage extends StatelessWidget {
               _MenuOption(
                 navigation: 'pinterestPage',
                 navigationOpt: 'Pinterest',
+              ),
+              _MenuOption(
+                navigation: 'emergencyPage',
+                navigationOpt: 'Emergency',
               )
             ],
           ),
