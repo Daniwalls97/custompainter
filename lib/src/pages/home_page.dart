@@ -37,6 +37,10 @@ class HomePage extends StatelessWidget {
               _MenuOption(
                 navigation: 'emergencyPage',
                 navigationOpt: 'Emergency',
+              ),
+              _MenuOption(
+                navigation: 'sliverListPage',
+                navigationOpt: 'Sliver List',
               )
             ],
           ),

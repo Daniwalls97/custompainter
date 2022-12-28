@@ -56,6 +56,7 @@ class EmergencyPage extends StatelessWidget {
         Container(
           margin: const EdgeInsets.only(top: 200),
           child: ListView(
+            // En las physics estas hace que se haga el rebote que por defecto hace iOS en sus listas, Android se ve el borde con el color primary
             physics: const BouncingScrollPhysics(),
             children: [const SizedBox(height: 80), ...itemMap],
           ),

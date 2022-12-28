@@ -6,6 +6,7 @@ import 'package:custompainter/src/pages/emergency_page.dart';
 import 'package:custompainter/src/pages/headers_page.dart';
 import 'package:custompainter/src/pages/pinterest_page.dart';
 import 'package:custompainter/src/pages/slideshow_page.dart';
+import 'package:custompainter/src/pages/sliver_list_page.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:disposable_provider/disposable_provider.dart';
@@ -43,7 +44,8 @@ class MyApp extends StatelessWidget {
             // 'circularProgressPage': (context) => const CircularProgressPage(),
             'pinterestPage': (context) => const PinterestPage(),
             'headersPage': (context) => const HeadersPage(),
-            'emergencyPage': (context) => EmergencyPage()
+            'emergencyPage': (context) => EmergencyPage(),
+            'sliverListPage': (context) => SliverListPage()
           }),
       // home: PinterestPage()),
     );
